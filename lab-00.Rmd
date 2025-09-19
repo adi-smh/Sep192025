@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Adi", "Niharika", "Collin", 
+           "Xu Sun/Emily", "Xiu Feng/Judy", "Cecilia"),
+  github_username = c("adi-smh", "niharirajanala-bot", "CollinMegson", 
+                      "emily-username", "xiufengzhu992", "s2780666"), 
+  colour = c("pink", "lavender", "cornflowerblue", 
+             "lightblue", "black", "lightgoldenrod"),
+  hobby = c("theatre", "reading", "tennis", 
+            "ice hockey", "video games", "sleeping"),
+  favourite_number = c(2, 7, 2, 7, 3, 3)
   )
 
 team_data
@@ -47,19 +47,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+I see a bar graph. The x-axis is labelled "github_username," and has six values with each individual's username. Each bar is the person's favorite color. The y-axis is labelled "favourite_number," and each bar reaches to the y-value of the person's favourite number.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Student Username", 
+          y = "Selected Number",
+          title = "Bar Graph Example")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+I used ?labs and found that the labs() command is used for labels and labelling.
 
 ### Exercise 20
 
@@ -69,4 +69,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+It would probably not be a very good visualization because there would be very few repeats for any given hobby, making a very wide and short bar graph. It would make more sense to display the data using a list in order of each hobby's frequency with repeated numbers -- For example: '1' has 4 students in one hobby, '2' has 3 students in each of five hobbies, '7' has 2 students in each of eleven hobbies, and '18' has 1 student in each of twenty-three hobbies.
